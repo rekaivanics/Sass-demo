@@ -1,0 +1,34 @@
+/*univerzális reset* nem kell  ha reset css van
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+} */
+
+html {
+    font-size: 62.5%;
+    /*font-size: 16px;
+    1rem = 10px; 10/16px =62,5%
+    mert 1 rem 10px lesz így, szóval az össz px mehet rembe 10-el osztva* de 62,5% van nála?*/
+
+    @include respond(tab-land) {
+    font-size: 56.25% //1rem 9px
+  }
+    @include respond(tab-port) {
+      font-size: 50%; //1rem = 8px, 8/16=50%
+  }
+    @include respond(big desktop) {
+      font-size: 75%
+  }
+
+}
+
+body {
+    box-sizing: border-box;
+    padding: 2rem; /*keret az egész oldal körül*/
+
+    @include respond(tab-port) {
+      padding: 0;
+  }
+
+  }
