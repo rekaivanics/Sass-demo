@@ -1,0 +1,166 @@
+/*
+COLORS:
+
+Light green: #7ed56f
+Medium green: #55c57a
+Dark green: #28b485
+
+*/
+
+/*univerzális reset* nem kell  ha reset css van
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+} */
+/*font: öröklődik mindig, úgyhogy minden font relatív cuccot bodyba!*/
+body {
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.7;
+    color: #777;
+    padding: 20px; /*keret az egész oldal körül*/
+  }
+  .header {
+    height: 95vh; /*95% a viewport-hieght-nek*/
+    background-image:
+      linear-gradient( /*az átlátszó réteg*/
+        to right bottom,
+        /* /* ezek helyett sass változók */
+        rgba(126, 213, 111, 0.8),
+        rgba(40, 100, 131, 0.8)), 
+
+        /* rgba ($color-primary-light, 0.8),
+        rgba ($color-primary-dark, 0.8)), */
+        url(../img/hero.jpg); /*a kép alatta*/
+    background-size: cover;
+    background-position: top;
+    /*a ferde vonal - svgvel vágja ki, mekkora látszódjon*/
+    /*top-left, clockwise*/
+    clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+    position: relative;
+  }
+  .header__logo-box {
+    position: absolute;
+    top: 40px;
+    left: 40px;
+  }
+  .header__logo {
+    height: 35px;
+    width: auto; /*nem muszáj, magától is ilyen lenne*/
+  }
+  .header__text-box {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%); /*középre igazít*/
+    text-align: center; /*a benne lévő szöveget középre*/
+  }
+  .heading-primary {
+    color: #fff;
+    text-transform: uppercase;
+    /*kiveszi a recegést az animaciobol*/
+    backface-visibility: hidden;
+    margin-bottom: 60px;
+  }
+  .heading-primary--main {
+    display: block;
+    /*span alapvetően inline, azért block, hogy sortörás legyen utána*/
+    font-size: 60px;
+    font-weight: 400;
+    letter-spacing: 35px;
+  
+    animation: moveInLeft;
+    animation-duration: 2s;
+    /* lehet még:
+    animation-delay: 3s;  késik ennyit
+    animation-iteration-count: 3;  3* lefut
+    animation-timing-function: ease-out; */
+  
+  }
+  .heading-primary--sub {
+    display: block;
+    /*span inline aműgy; igy linebreak*/
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 17.4px;
+    animation: moveInRight 1s ease-out;
+  }
+  
+  /* animation */
+  
+  @keyframes moveInLeft {
+    0% {
+      opacity: 0; /*nem látszik kezdetben*/
+      transform: translateX(-100px);/*kint balra kezd*/ }
+    80% {
+      transform: translateX(10px); /*kicsit túlmegy*/ }
+    100% {
+      opacity: 1; /*látszik az anim végére*/
+      transform: translate(0); } }
+  
+  @keyframes moveInRight {
+    0% {
+      opacity: 0;
+      transform: translateX(100px); }
+    80% {
+      transform: translateX(-1rem); }
+    100% {
+      opacity: 1;
+      transform: translate(0); } }
+  
+  @keyframes moveInButton {
+    0% {
+      opacity: 0;
+      transform: translateY(30px); }
+    100% {
+      opacity: 1;
+      transform: translate(0); } }
+      
+  /*button*/    
+  .btn:link, .btn:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 15px 40px;
+    display: inline-block;
+    border-radius: 100px;
+    transition: all .2s; /*shorthand minden animalható*/
+    position: relative;
+  }
+  .btn:hover {
+    transform: translateY(-3px); /*felülről lefele mozgat: ezért - h felfele menjen*/
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);  /*x teng, y teng, blur */
+  }
+  .btn:active {
+    transform: translateY(-2px); /*alaphoz képest 2px*/
+    box-shadow: 0 5px 10px rgba(10, 0, 0, 0.2);  /*x teng, y teng, blur*/
+  }
+  .btn--white {
+    background-color: #fff;
+    color: #777;
+  }
+  /*a gomb körül a fehér hover cucc, beteszi a gomb mögé, és hoverre megnő*/
+  .btn::after /* a button gyerekeként viselkedik, ezért ok a 100% */ {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all .4s;
+  }
+  .btn--white::after {
+    background-color: #fff;
+  }
+  .btn:hover::after /*akkor jön, ha hover*/ {
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0; /*fade in*/
+  }
+  .btn--animated {
+    animation: moveInButton 0.5s ease-out 0.75;
+    animation-fill-mode: backwards; /*megfordítja*/
+  }
