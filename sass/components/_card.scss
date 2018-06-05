@@ -4,8 +4,6 @@
     -moz-perspective: 150rem;
     position: relative;
     height: 52rem; /*hogy a front-back side u akkora legyen*/
-
-
     
     &__side {
         height: 52rem;
@@ -163,7 +161,10 @@
 
 
 
-    @include respond(tab-port) {
+    //@include respond(tab-port) {
+    //nemcsak képernyőre, hanem device-re is opt: landscape mindig nem tud hoverelni
+    @media only screen and (max-width: 56.25em),
+            only screen and (hover:none) {
 
         height: auto; 
         border-radius: 3px;
@@ -209,7 +210,6 @@
             font-size: 4rem;
         }
     }
-
 
 }
 

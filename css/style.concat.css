@@ -472,22 +472,16 @@ html {
     1rem = 10px; 10/16px =62,5%
     mert 1 rem 10px lesz így, szóval az össz px mehet rembe 10-el osztva* de 62,5% van nála?*/
   /*     @if $breakpoint == big desktop {
-        @media only screen and (min-width: 112.5em) { //1800 px
-                @content
-            }
-        }; 
+        @media only screen and (min-width: 112.5em) { @content }; //1800px
+    } 
  */
   /*     @if $breakpoint == big desktop {
-        @media only screen and (min-width: 112.5em) { //1800 px
-                @content
-            }
-        }; 
+        @media only screen and (min-width: 112.5em) { @content }; //1800px
+    } 
  */
   /*     @if $breakpoint == big desktop {
-        @media only screen and (min-width: 112.5em) { //1800 px
-                @content
-            }
-        }; 
+        @media only screen and (min-width: 112.5em) { @content }; //1800px
+    } 
  */ }
   @media only screen and (max-width: 75em) {
     html {
@@ -501,14 +495,16 @@ body {
   padding: 2rem;
   /*keret az egész oldal körül*/
   /*     @if $breakpoint == big desktop {
-        @media only screen and (min-width: 112.5em) { //1800 px
-                @content
-            }
-        }; 
+        @media only screen and (min-width: 112.5em) { @content }; //1800px
+    } 
  */ }
   @media only screen and (max-width: 56.25em) {
     body {
       padding: 0; } }
+
+::selection {
+  background-color: #55c57a;
+  color: #fff; }
 
 /* animation */
 @keyframes moveInLeft {
@@ -569,10 +565,8 @@ body {
       animation-delay: 3s;  késik ennyit
       animation-iteration-count: 3;  3* lefut */
     /*     @if $breakpoint == big desktop {
-        @media only screen and (min-width: 112.5em) { //1800 px
-                @content
-            }
-        }; 
+        @media only screen and (min-width: 112.5em) { @content }; //1800px
+    } 
  */ }
     @media only screen and (max-width: 37.5em) {
       .heading-primary--main {
@@ -586,10 +580,8 @@ body {
     letter-spacing: 1.75rem;
     animation: moveInRight 1s ease-out;
     /*     @if $breakpoint == big desktop {
-        @media only screen and (min-width: 112.5em) { //1800 px
-                @content
-            }
-        }; 
+        @media only screen and (min-width: 112.5em) { @content }; //1800px
+    } 
  */ }
     @media only screen and (max-width: 37.5em) {
       .heading-primary--sub {
@@ -609,16 +601,12 @@ body {
   /*tök pici, rem v px mindegy*/
   transition: all 0.2s;
   /*     @if $breakpoint == big desktop {
-        @media only screen and (min-width: 112.5em) { //1800 px
-                @content
-            }
-        }; 
+        @media only screen and (min-width: 112.5em) { @content }; //1800px
+    } 
  */
   /*     @if $breakpoint == big desktop {
-        @media only screen and (min-width: 112.5em) { //1800 px
-                @content
-            }
-        }; 
+        @media only screen and (min-width: 112.5em) { @content }; //1800px
+    } 
  */ }
   @media only screen and (max-width: 56.25em) {
     .heading-secondary {
@@ -647,10 +635,8 @@ body {
 .u-margin-bottom-big {
   margin-bottom: 8rem !important;
   /*     @if $breakpoint == big desktop {
-        @media only screen and (min-width: 112.5em) { //1800 px
-                @content
-            }
-        }; 
+        @media only screen and (min-width: 112.5em) { @content }; //1800px
+    } 
  */ }
   @media only screen and (max-width: 56.25em) {
     .u-margin-bottom-big {
@@ -659,10 +645,8 @@ body {
 .u-margin-bottom-medium {
   margin-bottom: 4rem !important;
   /*     @if $breakpoint == big desktop {
-        @media only screen and (min-width: 112.5em) { //1800 px
-                @content
-            }
-        }; 
+        @media only screen and (min-width: 112.5em) { @content }; //1800px
+    } 
  */ }
   @media only screen and (max-width: 56.25em) {
     .u-margin-bottom-medium {
@@ -765,10 +749,8 @@ body {
     outline-offset: 2rem;
     /*eltartja a zöldet, boderrel ez nem megy!*/
     /*     @if $breakpoint == big desktop {
-        @media only screen and (min-width: 112.5em) { //1800 px
-                @content
-            }
-        }; 
+        @media only screen and (min-width: 112.5em) { @content }; //1800px
+    } 
  */ }
     @media only screen and (max-width: 56.25em) {
       .composition__photo {
@@ -781,10 +763,8 @@ body {
       top: -2rem;
       /*felfele mozgatja*/
       /*     @if $breakpoint == big desktop {
-        @media only screen and (min-width: 112.5em) { //1800 px
-                @content
-            }
-        }; 
+        @media only screen and (min-width: 112.5em) { @content }; //1800px
+    } 
  */ }
       @media only screen and (max-width: 56.25em) {
         .composition__photo--p1 {
@@ -794,10 +774,8 @@ body {
       right: 0;
       top: 2rem;
       /*     @if $breakpoint == big desktop {
-        @media only screen and (min-width: 112.5em) { //1800 px
-                @content
-            }
-        }; 
+        @media only screen and (min-width: 112.5em) { @content }; //1800px
+    } 
  */ }
       @media only screen and (max-width: 56.25em) {
         .composition__photo--p2 {
@@ -808,10 +786,8 @@ body {
       left: 20%;
       top: 10rem;
       /*     @if $breakpoint == big desktop {
-        @media only screen and (min-width: 112.5em) { //1800 px
-                @content
-            }
-        }; 
+        @media only screen and (min-width: 112.5em) { @content }; //1800px
+    } 
  */ }
       @media only screen and (max-width: 56.25em) {
         .composition__photo--p3 {
@@ -837,10 +813,8 @@ body {
   box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.8);
   transition: transform 0.3s;
   /*     @if $breakpoint == big desktop {
-        @media only screen and (min-width: 112.5em) { //1800 px
-                @content
-            }
-        }; 
+        @media only screen and (min-width: 112.5em) { @content }; //1800px
+    } 
  */ }
   @media only screen and (max-width: 56.25em) {
     .feature-box {
@@ -859,10 +833,8 @@ body {
     /*tök pici, rem v px mindegy*/
     transition: all 0.2s;
     /*     @if $breakpoint == big desktop {
-        @media only screen and (min-width: 112.5em) { //1800 px
-                @content
-            }
-        }; 
+        @media only screen and (min-width: 112.5em) { @content }; //1800px
+    } 
  */ }
     @media only screen and (max-width: 56.25em) {
       .feature-box__icon {
@@ -876,13 +848,7 @@ body {
   -moz-perspective: 150rem;
   position: relative;
   height: 52rem;
-  /*hogy a front-back side u akkora legyen*/
-  /*     @if $breakpoint == big desktop {
-        @media only screen and (min-width: 112.5em) { //1800 px
-                @content
-            }
-        }; 
- */ }
+  /*hogy a front-back side u akkora legyen*/ }
   .card__side {
     height: 52rem;
     transition: all 0.8s ease;
@@ -978,7 +944,7 @@ body {
   .card__price-value {
     font-size: 6rem;
     font-weight: 100%; }
-  @media only screen and (max-width: 56.25em) {
+  @media only screen and (max-width: 56.25em), only screen and (hover: none) {
     .card {
       height: auto;
       border-radius: 3px;
@@ -1018,16 +984,12 @@ body {
   font-size: 1.6rem;
   transform: skewX(-12deg);
   /*     @if $breakpoint == big desktop {
-        @media only screen and (min-width: 112.5em) { //1800 px
-                @content
-            }
-        }; 
+        @media only screen and (min-width: 112.5em) { @content }; //1800px
+    } 
  */
   /*     @if $breakpoint == big desktop {
-        @media only screen and (min-width: 112.5em) { //1800 px
-                @content
-            }
-        }; 
+        @media only screen and (min-width: 112.5em) { @content }; //1800px
+    } 
  */ }
   @media only screen and (max-width: 56.25em) {
     .story {
@@ -1047,10 +1009,8 @@ body {
     border-radius: 50%;
     /*annak, aki nem support clip-path*/
     /*     @if $breakpoint == big desktop {
-        @media only screen and (min-width: 112.5em) { //1800 px
-                @content
-            }
-        }; 
+        @media only screen and (min-width: 112.5em) { @content }; //1800px
+    } 
  */ }
     @supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0)) {
       .story__shape {
@@ -1075,10 +1035,8 @@ body {
     transform: skewX(12deg);
     /*visszaforgat*/
     /*     @if $breakpoint == big desktop {
-        @media only screen and (min-width: 112.5em) { //1800 px
-                @content
-            }
-        }; 
+        @media only screen and (min-width: 112.5em) { @content }; //1800px
+    } 
  */ }
     @media only screen and (max-width: 37.5em) {
       .story__text {
@@ -1144,10 +1102,8 @@ body {
   display: block;
   transition: all 0.3s;
   /*     @if $breakpoint == big desktop {
-        @media only screen and (min-width: 112.5em) { //1800 px
-                @content
-            }
-        }; 
+        @media only screen and (min-width: 112.5em) { @content }; //1800px
+    } 
  */ }
   @media only screen and (max-width: 56.25em) {
     .form__input {
@@ -1174,10 +1130,8 @@ body {
   /*igy elfér egymás mellett inline-block*/
   display: inline-block;
   /*     @if $breakpoint == big desktop {
-        @media only screen and (min-width: 112.5em) { //1800 px
-                @content
-            }
-        }; 
+        @media only screen and (min-width: 112.5em) { @content }; //1800px
+    } 
  */ }
   @media only screen and (max-width: 56.25em) {
     .form__radio-group {
@@ -1309,10 +1263,8 @@ body {
   /*top-left, clockwise 
     de nem minden böngi támogatja, ezért support - ha igen, alkalmazza*/
   /*     @if $breakpoint == big desktop {
-        @media only screen and (min-width: 112.5em) { //1800 px
-                @content
-            }
-        }; 
+        @media only screen and (min-width: 112.5em) { @content }; //1800px
+    } 
  */ }
   @supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0)) {
     .header {
@@ -1320,7 +1272,7 @@ body {
       clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
       height: 95vh;
       /*95% a viewport-hieght-nek*/ } }
-  @media (min-resolution: 192dpi) and (min-width: 37.5em), (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em), (min-width: 125em) {
+  @media only screen and (min-resolution: 192dpi) and (min-width: 37.5em), only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em), only screen and (min-width: 125em) {
     .header {
       /*, = or itt 37,5em = 600px/16 2 sor:safarira ugyanez 2x-es felbontás */
       background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url(../img/hero.jpg);
@@ -1350,18 +1302,14 @@ body {
   max-width: 114rem;
   margin: 0 auto;
   /*     @if $breakpoint == big desktop {
-        @media only screen and (min-width: 112.5em) { //1800 px
-                @content
-            }
-        }; 
+        @media only screen and (min-width: 112.5em) { @content }; //1800px
+    } 
  */ }
   .row:not(:last-child) {
     margin-bottom: 8rem;
     /*     @if $breakpoint == big desktop {
-        @media only screen and (min-width: 112.5em) { //1800 px
-                @content
-            }
-        }; 
+        @media only screen and (min-width: 112.5em) { @content }; //1800px
+    } 
  */ }
     @media only screen and (max-width: 56.25em) {
       .row:not(:last-child) {
@@ -1377,18 +1325,14 @@ body {
   .row [class^="grid-"] {
     float: left;
     /*     @if $breakpoint == big desktop {
-        @media only screen and (min-width: 112.5em) { //1800 px
-                @content
-            }
-        }; 
+        @media only screen and (min-width: 112.5em) { @content }; //1800px
+    } 
  */ }
     .row [class^="grid-"]:not(:last-child) {
       margin-right: 6rem;
       /*     @if $breakpoint == big desktop {
-        @media only screen and (min-width: 112.5em) { //1800 px
-                @content
-            }
-        }; 
+        @media only screen and (min-width: 112.5em) { @content }; //1800px
+    } 
  */ }
       @media only screen and (max-width: 56.25em) {
         .row [class^="grid-"]:not(:last-child) {
@@ -1415,10 +1359,8 @@ body {
   padding: 10rem;
   font-size: 1.4rem;
   /*     @if $breakpoint == big desktop {
-        @media only screen and (min-width: 112.5em) { //1800 px
-                @content
-            }
-        }; 
+        @media only screen and (min-width: 112.5em) { @content }; //1800px
+    } 
  */ }
   @media only screen and (max-width: 56.25em) {
     .footer {
@@ -1427,10 +1369,8 @@ body {
     text-align: center;
     margin-bottom: 8rem;
     /*     @if $breakpoint == big desktop {
-        @media only screen and (min-width: 112.5em) { //1800 px
-                @content
-            }
-        }; 
+        @media only screen and (min-width: 112.5em) { @content }; //1800px
+    } 
  */ }
     @media only screen and (max-width: 56.25em) {
       .footer__logo-box {
@@ -1443,10 +1383,8 @@ body {
     padding-top: 2rem;
     display: inline-block;
     /*     @if $breakpoint == big desktop {
-        @media only screen and (min-width: 112.5em) { //1800 px
-                @content
-            }
-        }; 
+        @media only screen and (min-width: 112.5em) { @content }; //1800px
+    } 
  */ }
     @media only screen and (max-width: 56.25em) {
       .footer__navigation {
@@ -1475,10 +1413,8 @@ body {
     padding-top: 2rem;
     width: 80%;
     /*     @if $breakpoint == big desktop {
-        @media only screen and (min-width: 112.5em) { //1800 px
-                @content
-            }
-        }; 
+        @media only screen and (min-width: 112.5em) { @content }; //1800px
+    } 
  */ }
     @media only screen and (max-width: 56.25em) {
       .footer__copyright {
@@ -1502,16 +1438,12 @@ body {
   text-align: center;
   cursor: pointer;
   /*     @if $breakpoint == big desktop {
-        @media only screen and (min-width: 112.5em) { //1800 px
-                @content
-            }
-        }; 
+        @media only screen and (min-width: 112.5em) { @content }; //1800px
+    } 
  */
   /*     @if $breakpoint == big desktop {
-        @media only screen and (min-width: 112.5em) { //1800 px
-                @content
-            }
-        }; 
+        @media only screen and (min-width: 112.5em) { @content }; //1800px
+    } 
  */ }
   @media only screen and (max-width: 56.25em) {
     .navigation__button {
@@ -1533,16 +1465,12 @@ body {
   z-index: 1000;
   transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1);
   /*     @if $breakpoint == big desktop {
-        @media only screen and (min-width: 112.5em) { //1800 px
-                @content
-            }
-        }; 
+        @media only screen and (min-width: 112.5em) { @content }; //1800px
+    } 
  */
   /*     @if $breakpoint == big desktop {
-        @media only screen and (min-width: 112.5em) { //1800 px
-                @content
-            }
-        }; 
+        @media only screen and (min-width: 112.5em) { @content }; //1800px
+    } 
  */ }
   @media only screen and (max-width: 56.25em) {
     .navigation__background {
@@ -1649,10 +1577,8 @@ body {
   margin-top: -20vh;
   /*hogy a háromszög alja is szürke legyen*/
   /*     @if $breakpoint == big desktop {
-        @media only screen and (min-width: 112.5em) { //1800 px
-                @content
-            }
-        }; 
+        @media only screen and (min-width: 112.5em) { @content }; //1800px
+    } 
  */ }
   @media only screen and (max-width: 56.25em) {
     .section-about {
@@ -1667,10 +1593,8 @@ body {
   margin-top: -11rem;
   /*kitakarja a kis fehéret*/
   /*     @if $breakpoint == big desktop {
-        @media only screen and (min-width: 112.5em) { //1800 px
-                @content
-            }
-        }; 
+        @media only screen and (min-width: 112.5em) { @content }; //1800px
+    } 
  */ }
   .section-features > * {
     transform: skewY(7deg);
@@ -1685,10 +1609,8 @@ body {
   margin-top: -11rem;
   /*kitakarja a kis fehéret*/
   /*     @if $breakpoint == big desktop {
-        @media only screen and (min-width: 112.5em) { //1800 px
-                @content
-            }
-        }; 
+        @media only screen and (min-width: 112.5em) { @content }; //1800px
+    } 
  */ }
   @media only screen and (max-width: 56.25em) {
     .section-tours {
@@ -1699,10 +1621,8 @@ body {
   position: relative;
   /*a videó miatt*/
   /*     @if $breakpoint == big desktop {
-        @media only screen and (min-width: 112.5em) { //1800 px
-                @content
-            }
-        }; 
+        @media only screen and (min-width: 112.5em) { @content }; //1800px
+    } 
  */ }
   @media only screen and (max-width: 56.25em) {
     .section-stories {
@@ -1712,10 +1632,8 @@ body {
   padding: 15rem 0;
   background-image: linear-gradient(to right bottom, #7ed56f, #28b485);
   /*     @if $breakpoint == big desktop {
-        @media only screen and (min-width: 112.5em) { //1800 px
-                @content
-            }
-        }; 
+        @media only screen and (min-width: 112.5em) { @content }; //1800px
+    } 
  */ }
   @media only screen and (max-width: 56.25em) {
     .section-book {
@@ -1728,16 +1646,12 @@ body {
   border-radius: 3px;
   box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.2);
   /*     @if $breakpoint == big desktop {
-        @media only screen and (min-width: 112.5em) { //1800 px
-                @content
-            }
-        }; 
+        @media only screen and (min-width: 112.5em) { @content }; //1800px
+    } 
  */
   /*     @if $breakpoint == big desktop {
-        @media only screen and (min-width: 112.5em) { //1800 px
-                @content
-            }
-        }; 
+        @media only screen and (min-width: 112.5em) { @content }; //1800px
+    } 
  */ }
   @media only screen and (max-width: 75em) {
     .book {
@@ -1749,16 +1663,12 @@ body {
     width: 50%;
     padding: 6rem;
     /*     @if $breakpoint == big desktop {
-        @media only screen and (min-width: 112.5em) { //1800 px
-                @content
-            }
-        }; 
+        @media only screen and (min-width: 112.5em) { @content }; //1800px
+    } 
  */
     /*     @if $breakpoint == big desktop {
-        @media only screen and (min-width: 112.5em) { //1800 px
-                @content
-            }
-        }; 
+        @media only screen and (min-width: 112.5em) { @content }; //1800px
+    } 
  */ }
     @media only screen and (max-width: 75em) {
       .book__form {

@@ -29,6 +29,12 @@ body {
 
     @include respond(tab-port) {
       padding: 0;
-  }
+    }
 
   }
+// kis egyéni változtatások: kijelölés vált. szövegben
+::selection {
+  background-color: $color-primary;
+  color: $color-general-light;
+}
+
